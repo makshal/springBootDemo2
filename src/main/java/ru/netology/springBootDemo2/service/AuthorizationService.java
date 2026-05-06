@@ -1,5 +1,6 @@
 package ru.netology.springBootDemo2.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.netology.springBootDemo2.exeption.InvalidCredentials;
 import ru.netology.springBootDemo2.exeption.UnauthorizedUser;
@@ -13,6 +14,7 @@ public class AuthorizationService {
 
     private final UserRepository userRepository;
 
+    @Autowired
     public AuthorizationService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
